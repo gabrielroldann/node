@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Raleway:wght@400;500;600;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url(./assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    padding: 1.5rem 3rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+header #logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+header #menu {
+    display: flex;
+    gap: 2rem;
+    /* border: 1px solid red; */
+}
+
+header #menu a {
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+header #menu a:hover {
+    opacity: 0.7;
+}
+
+/* TABELA */
+
+#tabela {
+    width: 75%;
+    height: 80vh;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#tabela #header-tabela {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#tabela #header-tabela h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+
+
+
+/* FORM */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 30%;
+    height: 70%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+}
+
+form h1{
+    color: rgba(0, 0, 0, 0.75);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+input {
+    height: 3rem;
+    width: 60%;
+    padding-left: 10px;
+
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+
+    transition: all 0.3s ease;
+}
+
+#msg {
+    font-size: 0.9rem;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    max-width: 60%;
+    max-height: 7rem;
+    min-width: 60%;
+    min-height: 7rem;
+    resize: none;
+
+    transition: all 0.3s ease;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+}
+
+input:hover, #msg:hover {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+input:focus #msg:focus{
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+#button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
