@@ -82,7 +82,7 @@ app.post('/contato', function(req,res) {
     res.send(data);
 });
 
-// retorna json contatos
+// retorna json de contatos
 app.get('/contatos', function(req, res) {
 
     var con = mysql.createConnection({
@@ -96,11 +96,11 @@ app.get('/contatos', function(req, res) {
         if (err) throw err;
         console.log("Conectado");
 
-        const query = "SELECT * FROM contato"
+        const query = "SELECT * FROM contato";
         con.query(query, (err, result) => {
             if (err) throw err;
 
-            // console.log(result);
+            console.log(result);
             res.send(result);
         })
     })
@@ -158,7 +158,7 @@ app.put('/contatos/:email', (req, res) => {
 })
 
 // delete
-app.delete('/contatos', (req, res) => {
+app.delete('/contato', (req, res) => {
 
     const email = req.body.email;
 
@@ -176,9 +176,38 @@ app.delete('/contatos', (req, res) => {
         const query = `DELETE FROM contato WHERE email='${email}';`
         con.query(query, (err, result) => {
             if (err) throw err;
+            if (result.affectedRows == 0) {
+                console.log("Nenhuma linha afetada");
+                res.send("Nenhuma linha afetada \n" + result)
+            } else {
+                console.log("Delete Feito");
+                res.send("Delete feito \n" + result)
+            }
             console.log(result);
-            console.log("Delete Feito")
-            res.send(result);
+            // res.send(result);
+        })
+    })
+})
+
+app.get('/contatodetail.html?email=:email', (req, res) => {
+    
+    var con = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "i$>E8]>0&zDOG5c",
+        database: "node_test"
+    });
+
+    con.connect( (err) => {
+        if (err) throw err;
+        console.log("Conectado")
+
+        const query = `SELECT * FROM contato WHERE email='${req.params.email}'`
+
+        con.query(query, (err, result) => {
+            if (err) throw err;
+            console.log(result);
+            res.send(result)
         })
     })
 })

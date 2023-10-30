@@ -14,23 +14,30 @@
         <nav id="menu">
             <a href="index.html">Home</a>
             <a href="form.html">Form</a>
-            <a href="tabela.html">Tabela</a>
+            <a id="carregar-tabela" href="tabela.html">Tabela</a>
             <a href="#">Contact</a>
         </nav>
     </header>
+
+    <main id="main-tabela">
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <td>NOME</td>
+                    <td>EMAIL</td>
+                    <td>MENSAGEM</td>
+                    <td colspan="3">AÇÕES</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </main>
     
-    <div id="tabela">
-        <div id="header-tabela">
-            <h4>NOME</h4>
-            <h4>EMAIL</h4>
-            <h4>MENSAGEM</h4>
-        </div>
-
-        <div id="conteudo-tabela">
-            
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script-delete-contato.js"></script>
+    <script src="script-tabela.js"></script>
 </body>
 </html>

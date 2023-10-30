@@ -25,5 +25,3 @@ button.addEventListener('click', function enviar() {
     .then(response => console.log(json))
     .catch(err => console.log(err))
 });
-
-var pageTabela;
