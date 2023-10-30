@@ -33,11 +33,29 @@
                 
             </tbody>
         </table>
+
+        <dialog>
+            <div id="popup">
+                <div id="head-modal">
+                    <h1>EDITAR USUÁRIO</h1>
+                    <button id="close-modal" onclick="fecharModal();"><ion-icon name="close-circle"></ion-icon></button>
+                </div>
+    
+                <form id="form-editar">
+                    <input required id="nome-editar" type="text" placeholder="Nome *">
+                    <input required id="email-editar" type="email" placeholder="Email *">
+                    <textarea id="msg" placeholder="Mensagem"></textarea>
+                    <input id="button-editar" type="submit" onclick="editarContato();">
+                </form>
+                
+            </div>
+        </dialog>
     </main>
     
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="script-delete-contato.js"></script>
     <script src="script-tabela.js"></script>
+    <script src="script-delete-contato.js"></script>
+    <script src="script-editar-contato.js"></script>
 </body>
 </html>

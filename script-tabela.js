@@ -15,8 +15,8 @@ fetch('http://localhost:8080/contatos', {
             <td>${contato.email}</td>
             <td>${contato.mensagem}</td>
             <td><a href="contatodetail.html?email=${contato.email}">Ver</a></td>
-            <td><a onclick="deletar()" href="tabela.html?email=${contato.email}"><ion-icon name="trash-outline"></ion-icon></a></td>
-            <td><ion-icon id="editar" name="pencil"></ion-icon></td>
+            <td><a href="?email=${contato.email}" onclick="deletarContato('${contato.email}');">Deletar</a></td>
+            <td><a href="#?email=${contato.email}" onclick="abrirModal();">Editar</a></td>
         `;
         tbody.appendChild(row);
     });

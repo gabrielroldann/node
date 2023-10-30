@@ -158,9 +158,9 @@ app.put('/contatos/:email', (req, res) => {
 })
 
 // delete
-app.delete('/contato', (req, res) => {
+app.delete('/contato/:email', (req, res) => {
 
-    const email = req.body.email;
+    const email = req.params.email;
 
     var con = mysql.createConnection({
         host: "localhost",
@@ -176,38 +176,8 @@ app.delete('/contato', (req, res) => {
         const query = `DELETE FROM contato WHERE email='${email}';`
         con.query(query, (err, result) => {
             if (err) throw err;
-            if (result.affectedRows == 0) {
-                console.log("Nenhuma linha afetada");
-                res.send("Nenhuma linha afetada \n" + result)
-            } else {
-                console.log("Delete Feito");
-                res.send("Delete feito \n" + result)
-            }
             console.log(result);
-            // res.send(result);
-        })
-    })
-})
-
-app.get('/contatodetail.html?email=:email', (req, res) => {
-    
-    var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "i$>E8]>0&zDOG5c",
-        database: "node_test"
-    });
-
-    con.connect( (err) => {
-        if (err) throw err;
-        console.log("Conectado")
-
-        const query = `SELECT * FROM contato WHERE email='${req.params.email}'`
-
-        con.query(query, (err, result) => {
-            if (err) throw err;
-            console.log(result);
-            res.send(result)
+            res.send(result);
         })
     })
 })

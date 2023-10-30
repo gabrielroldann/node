@@ -62,6 +62,8 @@ header #menu a:hover {
     align-items: center;
     height: 86vh;
     font-family: 'Raleway', sans-serif;
+    /* border: 1px solid red; */
+    position: relative;
 }
 
 #tabela {
@@ -78,6 +80,7 @@ header #menu a:hover {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.8);
     transition: all 0.25s;
+    cursor: pointer;
 }
 
 #tabela tbody tr td a:hover {
@@ -90,7 +93,6 @@ header #menu a:hover {
 }
 
 #tabela tbody tr td ion-icon:hover {
-    cursor: pointer;
     opacity: 0.5;
 }
 
@@ -122,7 +124,7 @@ header #menu a:hover {
     font-family: 'Raleway', sans-serif;
 }
 
-form {
+#form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,7 +139,7 @@ form {
     padding: 1rem;
 }
 
-form h1{
+#form h1{
     color: rgba(0, 0, 0, 0.75);
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -199,4 +201,115 @@ input:focus #msg:focus{
     padding: 0;
     font-size: 0.9rem;
     cursor: pointer;
+}
+
+/* POPUP EDITAR */
+
+dialog {
+    padding: 1rem 1.5rem;
+
+    border: none;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 15rem;
+    height: 45%;
+    width: 25%;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: 'Raleway', sans-serif;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+#popup {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form-editar {
+    width: 100%;
+    height: 100%; 
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#form-editar input, #msg {
+    min-width: 80%;
+}
+
+#head-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    width: 80%;
+}
+
+#head-modal h1 {
+    color: rgba(0, 0, 0, 0.75);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+#head-modal #close-modal {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+
+    transition: all 0.3s;
+}
+
+#head-modal #close-modal:hover {
+    opacity: 0.7;
+}
+
+#infos {
+    width: 80%;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+#infos input, textarea {
+    width: 100%;
+}
+
+#infos textarea {
+    max-width: 100%;
+}
+
+#button-editar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    /* margin-bottom: 2rem; */
 }
