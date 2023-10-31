@@ -131,9 +131,12 @@ app.get('/contato/:email', function(req, res) {
 })
 
 // update
-app.put('/contatos/:email', (req, res) => {
+app.put('/contato/:email', (req, res) => {
 
+    const nome = req.body.nome
     const email = req.body.email
+    const mensagem = req.body.mensagem
+    
 
     var con = mysql.createConnection({
         host: "localhost",
@@ -146,7 +149,7 @@ app.put('/contatos/:email', (req, res) => {
         if (err) throw err;
         console.log("Conectado");
 
-        const query = `UPDATE contato SET email='${req.params.email}' WHERE email='${email}';`;
+        const query = `UPDATE contato SET nome='${nome}', email='${email}', mensagem='${mensagem}' WHERE email='${req.params.email}';`;
         console.log(query);
         con.query(query, (err, result) => {
             if (err) throw err;

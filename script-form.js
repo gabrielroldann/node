@@ -7,7 +7,7 @@ button.addEventListener('click', function enviar() {
     var mensagem = document.getElementById('msg');
 
     if (nome.value != "" && email.value != "") {
-        alert('Enviado com sucesso!');
+        alert('Enviado');
     }
 
     let data = {
@@ -21,7 +21,7 @@ button.addEventListener('click', function enviar() {
         body: JSON.stringify(data),
         headers: {"Content-type": "application/json; charset=UTF-8"}
     })
-    .then(response => response.json() )
+    .then(response => response.json())
     .then(response => console.log(json))
     .catch(err => console.log(err))
 });

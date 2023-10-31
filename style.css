@@ -282,6 +282,22 @@ dialog::backdrop {
     transition: all 0.3s;
 }
 
+#head-modal #close-modal a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+
+    transition: all 0.3s;
+}
+
+
 #head-modal #close-modal:hover {
     opacity: 0.7;
 }
@@ -296,12 +312,26 @@ dialog::backdrop {
     /* border: 1px solid red; */
 }
 
-#infos input, textarea {
+#infos input, #msg-editar {
     width: 100%;
 }
 
-#infos textarea {
-    max-width: 100%;
+#msg-editar {
+    font-size: 0.9rem;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    max-width: 80%;
+    max-height: 7rem;
+    min-width: 60%;
+    min-height: 7rem;
+    resize: none;
+
+    transition: all 0.3s ease;
 }
 
 #button-editar {

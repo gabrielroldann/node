@@ -8,4 +8,5 @@ function deletarContato(email) {
     
     .catch(error => console.error('Erro ao buscar dados:', error));
 
+    alert('Deletado')
 }

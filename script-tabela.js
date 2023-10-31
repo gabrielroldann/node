@@ -16,7 +16,7 @@ fetch('http://localhost:8080/contatos', {
             <td>${contato.mensagem}</td>
             <td><a href="contatodetail.html?email=${contato.email}">Ver</a></td>
             <td><a href="?email=${contato.email}" onclick="deletarContato('${contato.email}');">Deletar</a></td>
-            <td><a href="#?email=${contato.email}" onclick="abrirModal();">Editar</a></td>
+            <td><a href="#?email=${contato.email}" onclick="abrirModal('${contato.email}');">Editar</a></td>
         `;
         tbody.appendChild(row);
     });
